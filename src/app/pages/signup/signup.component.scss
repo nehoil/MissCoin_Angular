@@ -1,0 +1,40 @@
+.login-title {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.contact-edit-container {
+    display: flex;
+    justify-content: center;
+        .form-container {
+        width: fit-content;
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        background-color: #fff;
+        border-radius: 8px;
+        padding: 20px;
+        border: 1px solid rgb(240, 242, 247);
+        flex-direction: column;
+        box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.15), 0px 3px 8px rgba(0, 0, 0, 0.1) !important;
+        input {
+            width: 250px;
+            outline: none;
+            border: none;
+            border-bottom: 1px solid rgba(128, 128, 128, 0.651) ;
+        }
+    }
+    form {
+        display: flex;
+        justify-content: center;
+        text-align: left;
+        flex-direction: column;
+        & > * {
+            margin: 5px;
+        }
+    }
+    .form-errors {
+        color: red
+    }
+}
+  

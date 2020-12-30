@@ -1,0 +1,17 @@
+<div class="contact-edit-container">
+    <div class="form-container">
+        <div class="login-title">
+            <h1>Signup</h1>
+        </div>
+        <form (submit)="onSignup()">
+            <label> Name</label>
+            <input type="text" [(ngModel)]="user.name" name="name" />
+            <label> Email</label>
+            <input type="text" [(ngModel)]="user.email" name="email" />
+            <button>Save</button>
+            <span class="form-errors"> 
+                <!-- {{errorMsg}} -->
+                 </span>
+        </form>
+    </div>
+</div>

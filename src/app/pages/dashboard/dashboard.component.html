@@ -1,0 +1,102 @@
+<div class="homepage-container container">
+  <!-- {this.state.user && ( -->
+  <!-- <> -->
+  <div class="welcome-back-txt">
+    Welcome back {{user.name}}
+  </div>
+  <div class="main-content-hp">
+    <div class="hp-main-cards balances">
+      <div class="total-balances">
+        <div class="total-txt">Total Balances</div>
+        <div class="total-amount">
+          ${{userUsdBalance}}
+        </div>
+      </div>
+      <div class="balances-list">
+        <ul>
+          <li>
+            <div class="coin-text">
+              <i class="fab fa-bitcoin"></i> Bitcoin
+            </div>
+            <div class="coin-amounts">
+              {{user.coins}} BTC
+            </div>
+          </li>
+          <li>
+            <div class="coin-text">
+              <img src="https://www.flaticon.com/svg/static/icons/svg/3358/3358745.svg" width="20" alt="logo" />
+              <!-- {' '} -->
+              LiteCoin
+            </div>
+            <div class="coin-amounts">
+              0
+              LTC
+            </div>
+          </li>
+          <li>
+            <div class="coin-text">
+              <i class="fab fa-bitcoin"></i> Bitcoin Cash
+            </div>
+            <div class="coin-amounts">
+              0 BCH
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="hp-main-cards recent-payments">
+      <div class="total-balances">
+        <div class="total-txt">Recent Payments</div>
+        <div class="total-amount">
+          <!-- " ${this.totalPaymentsUsd}" -->
+        </div>
+      </div>
+      <div class="balances-list">
+        <move-list [moves]="user.moves"></move-list>
+      </div>
+      <!-- </div> -->
+      <!-- {!this.state.data.length ? ( -->
+      </div>
+      <chart
+      *ngIf="marketPrice.data"
+      type="marketPrice"
+      chartTitle="Market Price (BTC/USD)"
+      [chartSubTitle]="chartSubtitle"
+      chartNum="{{'$' + this.btcTousd}}"
+      [data]="marketPrice.data"
+      [colors]="marketPrice.colors"
+      ></chart>
+      <!-- <div className="chart-container chart-content">
+              <ContentLoader
+                width={300}
+                height={300}
+                viewBox="-30 10 200 200"
+              >
+                <rect x="0" y="160" rx="0" ry="0" width="25" height="40" />
+                <rect x="30" y="145" rx="0" ry="0" width="25" height="55" />
+                <rect x="60" y="126" rx="0" ry="0" width="25" height="74" />
+                <rect x="90" y="80" rx="0" ry="0" width="25" height="120" />
+                <rect
+                  x="120"
+                  y="142"
+                  rx="0"
+                  ry="0"
+                  width="25"
+                  height="58"
+                />
+              </ContentLoader>
+            </div> -->
+      <!-- ) : ( -->
+      <!-- <Chart
+              type="marketPrice"
+              chartTitle="Current Price"
+              chartSubTitle={`${this.btcDiffAmount ? '+' : '-'}$${this.btcDiffAmount} (${this.btcDiffPrecent}%) today`}
+              chartNum={'$' + this.btcTousd}
+              data={this.state.data}
+              chartColors={this.state.chartColors}
+            /> -->
+      <!-- )} -->
+      <!-- </div> -->
+      <!-- </> -->
+      <!-- )} -->
+    </div>

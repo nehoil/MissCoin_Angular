@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300&display=swap');
+
+
+.navbar-container {
+    a {
+        color: rgb(36, 35, 35);
+    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    min-height: 80px;
+    ul {
+        display: flex;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 18px;
+        margin: 0px;
+        outline: none;
+        overflow: visible;
+        padding: 12px;
+        text-align: inherit;
+        text-decoration: none;
+        user-select: auto;
+        position: relative;
+        white-space: nowrap;
+        align-items: center;
+        z-index: 1;
+        color: rgb(34, 34, 34);
+    }
+    li:not(:last-child){
+        margin-right: 10px;
+    }
+    & a:hover {
+        text-decoration: none;
+    }
+    .nav-logo {
+        align-items: center;
+        display: flex;
+        img {
+            width: 50px;
+        }
+        span {
+            font-family: 'Karla', sans-serif;
+            margin-left: 5px;
+            font-size: 1.3rem;
+        }
+    }
+    .profile-avatar {
+    position: relative;        
+    }
+    .connection-mode {
+        width: 12px;
+        height: 12px;
+        border: 2px solid white;
+        border-radius: 50%;
+        position: absolute;
+        z-index: 1;
+        right: 9px;
+        bottom: 9px;
+    }
+    .online { 
+        background-color: rgb(55, 216, 162);
+    }
+    .offline { 
+        background-color: rgb(202, 200, 200);
+    }
+}
+
+.navbar-main-container {
+    background-color: #fff;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 12px;
+}

@@ -1,0 +1,35 @@
+<div class="chart-container chart-content">
+    <div class="chart-txt">
+      <div class="coin-icon">
+        <i class="fab fa-bitcoin"></i> 
+        Bitcoin (BTC)
+      </div>
+      <div class="curr-price-txt">
+          {{chartTitle}}
+
+      </div>
+      <div class="curr-price-num">
+        {{chartNum}}
+        </div>
+      <div class="curr-price-change">
+        {{chartSubTitle}}
+        </div>
+    </div>
+    <div class="toolbar">
+    </div>
+  <apx-chart
+    #chart
+    [series]="chartOptions.series"
+    [chart]="chartOptions.chart"
+    [colors]="chartOptions.colors"
+    [yaxis]="chartOptions.yaxis"
+    [dataLabels]="chartOptions.dataLabels"
+    [markers]="chartOptions.markers"
+    [stroke]="chartOptions.stroke"
+    [xaxis]="chartOptions.xaxis"
+    [tooltip]="chartOptions.tooltip"
+    [annotations]="chartOptions.annotations"
+    [grid]="chartOptions.grid"
+  ></apx-chart>
+  
+  </div>
